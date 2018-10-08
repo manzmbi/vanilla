@@ -1,6 +1,6 @@
-# Build an Image Search App with:
+# Build an Image Search App with: VanillaJS
 
-#### Link to the finished app
+## Link to the finished app
 [Image Search APP (VANILLAJS)](https://ps-vanillajs.now.sh)
 
 ![example-site](ps-vanillajs-site.gif)
@@ -41,8 +41,8 @@ body {
 ## Vanilla JS
 ---
 
-* [ ] Add search form to page
-* [ ] Make API Request with search term when form is submitted
+* [x] Add search form to page
+* [x] Make API Request with search term when form is submitted
 * [ ] Show loading image
 * [ ] Append Results to the page
 * [ ] Hide loading image
