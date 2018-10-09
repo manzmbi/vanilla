@@ -43,8 +43,21 @@ body {
 
 * [x] Add search form to page
 * [x] Make API Request with search term when form is submitted
-* [ ] Show loading image
-* [ ] Append Results to the page
-* [ ] Hide loading image
+* [x] Show loading images
+* [x] Append Results to the page
+* [x] Hide loading image
+
+
+### Deployment
+
+  * We will deploy this little app with [Quick Deployment with now.sh](https://zeit.co/now)
+
+  * Steps:
+    * create an account on [now sign up](https://zeit.co/signup)
+
+  * install `now/cli`: 
+      ```bash
+        npm i -g now
+      ```
 
 
