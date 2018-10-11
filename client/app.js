@@ -1,15 +1,16 @@
 const access_key = '34acd100c5a6485e4819f3ea7d4cbb9fba59f9d37c3192944169d020c37bbce1';
-const apiUrl = "https://api.unsplash.com/search/photos/?page=1&per_page=20";
+const apiUrl = "https://api.unsplash.com/search/photos/?page=1&per_page=7";
 const input = document.querySelector('input');
 const form = document.querySelector('form');
 const imageDiv = document.querySelector('#imageDiv');
 const loadingImage = document.querySelector('#loadingImage');
 loadingImage.style.display = 'none';
 
+// On submit, prevent default behavior of form tag and retrieve input value
 form.addEventListener('submit', formSubmitted);
-
 function formSubmitted(event) {
     event.preventDefault();
+    // remove images from page after displaying
     imageDiv.innerHTML = "";
     // loadingImage.style.display = "";
     const searchTerm = input.value;
@@ -19,6 +20,7 @@ function formSubmitted(event) {
 
 }
 
+// Make API Request with search term when form is submitted
 function search(searchTerm) {
     const url = `${apiUrl}&query=${searchTerm}&client_id=${access_key}`;
     return fetch(url, {method: 'GET'}) // retourne une promise
@@ -29,7 +31,9 @@ function search(searchTerm) {
         });
 }
 
+// Show loading images
 function displayImages(images) {
+    // hide loading image
     loadingImage.style.display = 'none';
    images.forEach(image => {
        // Create img tag
